@@ -1,0 +1,26 @@
+{
+    "name": "fhirpath-lang",
+    "displayName": "Fhirpath lang",
+    "description": "Syntax highlight for fhirpath",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.78.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "fhirpath",
+            "aliases": ["Fhirpath", "fhirpath"],
+            "extensions": [".fhirpath"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "fhirpath",
+            "scopeName": "source.fhirpath",
+            "path": "./syntaxes/fhirpath.tmLanguage.json",
+            "injectTo": ["source.yaml"]
+        }]
+    }
+}
