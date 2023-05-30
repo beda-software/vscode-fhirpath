@@ -6,6 +6,9 @@
     "engines": {
         "vscode": "^1.78.0"
     },
+    "repository": {
+        "url": "https://github.com/beda-software/vscode-fhirpath"
+    },
     "categories": [
         "Programming Languages"
     ],
