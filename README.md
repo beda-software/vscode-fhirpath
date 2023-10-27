@@ -9,6 +9,10 @@ Embedded to YAML file (under expression keyword) and available for .fhirpath fil
 ## Release Notes
 
 
+### 0.1.1
+
+- Improve description of the package
+
 ### 0.1.0
 
 - Improve fhirpath in yaml highlighting in expression only (including double quoted and blocks)

@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.1.1
+
+- Improve description of the package
 
 ## 0.1.0
 
