@@ -1,0 +1,99 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Yaml With Fhirpath",
+  "injectionSelector": "L:source.yaml",
+  "patterns": [
+    {
+      "include": "#expressions"
+    }
+  ],
+  "repository": {
+    "expressions": {
+      "patterns": [
+        {
+          "begin": "(expression)(:)\\s*(?:(\\|)|(>))([1-9])?([-+])?(?:.*\\n?)",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.tag.yaml"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.mapping.yaml"
+            },
+            "3": {
+              "name": "punctuation.definition.block.scalar.literal.yaml"
+            },
+            "4": {
+              "name": "keyword.control.flow.block-scalar.folded.yaml"
+            },
+            "5": {
+              "name": "constant.numeric.indentation-indicator.yaml"
+            },
+            "6": {
+              "name": "storage.modifier.chomping-indicator.yaml"
+            }
+          },
+          "end": "^(?=\\S)|(?!\\G)",
+          "patterns": [
+            {
+              "begin": "^([ ]+)(?! )",
+              "end": "^(?!\\1|\\s*$)",
+              "patterns": [
+                {
+                  "include": "source.fhirpath"
+                }
+              ],
+              "contentName": "meta.embedded.block.expression"
+            }
+          ]
+        },
+        {
+          "begin": "(expression)(:)\\s*(\")",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.tag.yaml"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.mapping.yaml"
+            },
+
+            "3": {
+              "name": "punctuation.definition.string.begin.yaml"
+            }
+          },
+          "end": "\"",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.yaml"
+            }
+          },
+          "name": "string.quoted.double.yaml",
+          "patterns": [
+            {
+              "include": "source.fhirpath"
+            }
+          ],
+          "contentName": "meta.embedded.block.expression"
+        },
+        {
+          "begin": "(expression)(:)\\s*[^\\n]",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.tag.yaml"
+            },
+            "2": {
+              "name": "punctuation.separator.key-value.mapping.yaml"
+            }
+          },
+          "end": "\\n",
+          "patterns": [
+            {
+              "include": "source.fhirpath"
+            }
+          ],
+          "contentName": "meta.embedded.block.expression"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.yaml-with-fhirpath"
+}
