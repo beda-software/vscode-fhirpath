@@ -1,7 +1,7 @@
 {
   "name": "fhirpath-lang",
-  "displayName": "Fhirpath lang",
-  "description": "Syntax highlight for fhirpath",
+  "displayName": "Fhirpath language",
+  "description": "Syntax highlight for fhirpath (embedded into .yaml)",
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.78.0"
