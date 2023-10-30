@@ -8,17 +8,9 @@ Embedded to YAML file (under expression keyword) and available for .fhirpath fil
 
 ## Release Notes
 
-### 0.1.3
+### 0.1.4
 
 - Prepare extension for marketplace
-
-### 0.1.2
-
-- Prepare extension for marketplace
-
-### 0.1.1
-
-- Improve description of the package
 
 ### 0.1.0
 

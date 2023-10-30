@@ -2,7 +2,7 @@
   "name": "fhirpath-lang",
   "displayName": "Fhirpath Language",
   "description": "Syntax highlight for fhirpath (embedded into .yaml)",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publisher": "beda-software",
   "icon": "images/icon.png",
   "galleryBanner": {
