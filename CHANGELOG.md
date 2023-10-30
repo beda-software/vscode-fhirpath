@@ -1,5 +1,10 @@
 # Change Log
 
+
+## 0.1.3
+
+- Prepare extension for marketplace
+
 ## 0.1.2
 
 - Prepare extension for marketplace
