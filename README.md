@@ -11,7 +11,7 @@ Syntax highlight extension for fhirpath for VScode
 ## Release Notes
 
 
-## 0.1.6
+## 0.1.7
 
 - Embed to FSH (FHIR ShortHand) files to `[[blocks]]``
 - Fix YAML inline embedding
