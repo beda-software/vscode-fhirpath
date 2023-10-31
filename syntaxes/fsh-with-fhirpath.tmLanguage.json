@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "FSH With fhirpath",
+  "injectionSelector": "L:source.fsh",
+  "patterns": [
+    {
+      "include": "#expressions"
+    }
+  ],
+  "repository": {
+    "expressions": {
+      "patterns": [
+        {
+          "begin": "\\[\\[",
+          "end": "\\]\\]",
+          "patterns": [
+            {
+              "include": "source.fhirpath"
+            }
+          ],
+          "contentName": "meta.embedded.inline.expression"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.fsh-with-fhirpath"
+}

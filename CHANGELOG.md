@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.6
+
+- Embed to FSH (FHIR ShortHand) files to `[[blocks]]``
+- Fix YAML inline embedding
 
 ## 0.1.5
 

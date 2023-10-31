@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Yaml With Fhirpath",
+  "name": "YAML With fhirpath",
   "injectionSelector": "L:source.yaml",
   "patterns": [
     {
@@ -75,13 +75,21 @@
           "contentName": "meta.embedded.block.expression"
         },
         {
-          "begin": "(expression)(:)\\s*[^\\n]",
+          "begin": "(expression)(:)\\s*([^\\n])",
           "beginCaptures": {
             "1": {
               "name": "entity.name.tag.yaml"
             },
             "2": {
               "name": "punctuation.separator.key-value.mapping.yaml"
+            },
+            "3": {
+              "patterns": [
+                {
+                  "include": "source.fhirpath"
+                }
+              ],
+              "name": "meta.embedded.inline.expression"
             }
           },
           "end": "\\n",
@@ -90,7 +98,7 @@
               "include": "source.fhirpath"
             }
           ],
-          "contentName": "meta.embedded.block.expression"
+          "contentName": "meta.embedded.inline.expression"
         }
       ]
     }

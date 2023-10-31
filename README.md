@@ -1,12 +1,20 @@
 # fhirpath-lang
 
-Syntax highlight extension for Fhirpath for VScode
+Syntax highlight extension for fhirpath for VScode
 
 ## Features
 
-Embedded to YAML file (under expression keyword) and available for .fhirpath file extension
+- Available for .fhirpath file extension
+- Embedded to .yaml files (under expression keyword)
+- Embedded to .fsh files (inside `[[blocks]]`)
 
 ## Release Notes
+
+
+## 0.1.6
+
+- Embed to FSH (FHIR ShortHand) files to `[[blocks]]``
+- Fix YAML inline embedding
 
 ### 0.1.5
 
