@@ -2,7 +2,7 @@
   "name": "fhirpath-lang",
   "displayName": "Fhirpath Language",
   "description": "Syntax highlight for fhirpath (embedded into .yaml, .fsh)",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "publisher": "beda-software",
   "icon": "images/icon.png",
   "galleryBanner": {
@@ -20,7 +20,11 @@
   ],
   "license": "MIT",
   "keywords": [
-    "fhirpath", "yaml", "fsh", "fhir"
+    "fhirpath",
+    "yaml",
+    "fsh",
+    "fhir",
+    "jute"
   ],
   "homepage": "https://github.com/beda-software/vscode-fhirpath",
   "bugs": {
@@ -64,6 +68,17 @@
         "path": "./syntaxes/fsh-with-fhirpath.tmLanguage.json",
         "injectTo": [
           "source.fsh"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.expression": "fhirpath",
+          "meta.embedded.inline.expression": "fhirpath"
+        }
+      },
+      {
+        "scopeName": "source.jute-with-fhirpath",
+        "path": "./syntaxes/jute-with-fhirpath.tmLanguage.json",
+        "injectTo": [
+          "source.yaml"
         ],
         "embeddedLanguages": {
           "meta.embedded.block.expression": "fhirpath",

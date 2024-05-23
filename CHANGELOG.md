@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.0
+
+- Embed to JUTE inside `$ fhirpath()`
+
 ## 0.1.7
 
 - Embed to FSH (FHIR ShortHand) files to `[[blocks]]``

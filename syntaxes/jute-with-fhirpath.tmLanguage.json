@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "JUTE With fhirpath",
+  "injectionSelector": "L:source.yaml",
+  "patterns": [
+    {
+      "include": "#expressions"
+    }
+  ],
+  "repository": {
+    "expressions": {
+      "patterns": [
+        {
+          "begin": "\\$ fhirpath\\(",
+          "beginCaptures": {
+            "0": {
+              "name": "string.unquoted.plain.yaml"
+            }
+          },
+          "end": "\\).*",
+          "endCaptures": {
+            "0": {
+              "name": "string.unquoted.plain.yaml"
+            }
+          },
+          "patterns": [
+            {
+              "name": "inline.fhirpath",
+              "begin": "\"",
+              "end": "\"",
+              "patterns": [
+                {
+                  "include": "source.fhirpath",
+                  "match": "[^\"]+"
+                }
+              ]
+            },
+            {
+              "name": "inline.expressionContent",
+              "begin": "(\\()",
+              "end": "(\\))",
+              "patterns": [
+                {
+                  "include": "#expressionContent"
+                }
+              ]
+            }
+          ],
+          "contentName": "meta.embedded.inline.expression"
+        }
+      ]
+    },
+    "expressionContent": {
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "match": "[^\"]+",
+              "include": "source.fhirpath"
+            }
+          ]
+        },
+        {
+          "name": "inline.expressionContent",
+          "begin": "(\\()",
+          "end": "(\\))",
+          "patterns": [
+            {
+              "include": "#expressionContent"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "scopeName": "source.jute-with-fhirpath"
+}
