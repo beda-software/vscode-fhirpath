@@ -99,6 +99,69 @@
             }
           ],
           "contentName": "meta.embedded.inline.expression"
+        },
+        {
+          "begin": "\\{\\{",
+          "end": "\\}\\}",
+          "patterns": [
+            {
+              "include": "source.fhirpath"
+            }
+          ],
+          "contentName": "meta.embedded.inline.expression"
+        },
+        {
+          "begin": "\\{%\\s+(for)\\s+((\\w+)\\s*(,)\\s*)?(\\w+)\\s+(in)\\s+",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.for"
+            },
+            "6": {
+              "name": "keyword.control.in"
+            }
+          },
+          "end": "%\\}",
+          "patterns": [
+            {
+              "include": "source.fhirpath"
+            }
+          ],
+          "contentName": "meta.embedded.inline.expression"
+        },
+        {
+          "begin": "\\{%\\s+(if)\\s+",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.if"
+            }
+          },
+          "end": "%\\}",
+          "patterns": [
+            {
+              "include": "source.fhirpath"
+            }
+          ],
+          "contentName": "meta.embedded.inline.expression"
+        },
+        {
+          "begin": "\\{%\\s+(else)\\s+",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.else"
+            }
+          },
+          "end": "%\\}",
+          "contentName": "meta.embedded.inline.expression"
+        },
+        {
+          "begin": "\\{%\\s+(assign)\\s+",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.assign"
+            }
+          },
+          "end": "%\\}",
+          "contentName": "meta.embedded.inline.expression"
         }
       ]
     }
