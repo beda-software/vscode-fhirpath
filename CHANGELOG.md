@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.0
+
+- Add support for fhirpath mapping language constructions
+
 ## 0.2.0
 
 - Embed to JUTE inside `$ fhirpath()`
