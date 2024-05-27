@@ -101,8 +101,8 @@
           "contentName": "meta.embedded.inline.expression"
         },
         {
-          "begin": "\\{\\{",
-          "end": "\\}\\}",
+          "begin": "\\{\\{-?",
+          "end": "-?\\}\\}",
           "patterns": [
             {
               "include": "source.fhirpath"

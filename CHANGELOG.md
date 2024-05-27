@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.1
+
+- Add support for {{- -}} in FHIRPath mapping language
+
 ## 0.3.0
 
 - Add support for fhirpath mapping language constructions
