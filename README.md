@@ -11,6 +11,10 @@ Syntax highlight extension for fhirpath for VScode
 ## Release Notes
 
 
+## 0.3.1
+
+- Add support for FHIRPath Mapping Language embedded expressions
+
 ## 0.1.7
 
 - Embed to FSH (FHIR ShortHand) files to `[[blocks]]``
