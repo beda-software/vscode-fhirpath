@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.2
+
+-   Add support for {[ ]} syntax beda-software/FHIRPathMappingLanguage#20
+
 ## 0.3.1
 
 - Add support for {{- -}} in FHIRPath mapping language
